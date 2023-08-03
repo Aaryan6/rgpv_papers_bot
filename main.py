@@ -67,7 +67,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         ]
         reply_markup = InlineKeyboardMarkup(keyboard_list)
 
-        await update.message.reply_text("What is your Year?\n",
+        await update.message.reply_text("Great to see you here!\n\nWhat is your Year?",
                                         reply_markup=reply_markup)
         return COLLEGE_YEAR
 
