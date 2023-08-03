@@ -78,7 +78,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     ]
     reply_markup = InlineKeyboardMarkup(keyboard_list)
 
-    await update.message.reply_text("What is your Year?\n",
+    await update.message.reply_text("Great to see you here!\nWhat is your Year?",
                                     reply_markup=reply_markup)
     # Initialize user choices for this user
     user_choices[user_id] = INITIAL_USER_STATE
