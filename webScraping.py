@@ -2,9 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 
-async def getAllLinks(search_text):
-    response = requests.get(
-        "https://www.rgpvonline.com/btech-it-question-papers.html#list")
+async def getAllLinks(search_text, url):
+    response = requests.get(url)
     if response.status_code != 200:
         print(
             f"Failed to fetch data from url. Status code: {response.status_code}")
@@ -24,8 +23,8 @@ async def getAllLinks(search_text):
             word.lower() in item.lower() for word in search_text.split())]
 
         if len(matching_items) == 0:
-            return "Not found!"
+            return "Not found!\nMaybe there is no file\ntry with any different name."
         else:
             return matching_items
     else:
-        return "No links found!"
+        return "Not found!"
