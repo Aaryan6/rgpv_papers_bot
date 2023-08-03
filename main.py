@@ -50,7 +50,7 @@ def trucateString(original_string):
 # help command for bot
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /help is issued."""
-    await update.message.reply_text("Help!")
+    await update.message.reply_text("Tap /start command for choose the year and branch.\nThen enter the subject name.\nYou will get the links for the subject.\nSelect the link to download the file.")
 
 
 # start function for bot
